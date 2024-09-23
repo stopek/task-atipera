@@ -3,7 +3,16 @@
   <input
     matInput
     placeholder="What are you looking for?"
-    value=""
+    [(ngModel)]="query"
     (input)="onChange($event)"
     class="styled-input" />
+
+  <button
+    mat-icon-button
+    (click)="clearInput()"
+    aria-label="edit weight icon"
+    class="clear-button"
+    [disabled]="!query.length">
+    <mat-icon>cleaning_services</mat-icon>
+  </button>
 </mat-form-field>

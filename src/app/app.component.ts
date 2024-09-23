@@ -5,9 +5,7 @@ import { GLOBAL_RX_STATE, GlobalState } from './store/rx-state';
 import { PeriodicService } from './core/api/periodic.service';
 import { RxState } from '@rx-angular/state';
 import { delay } from 'rxjs';
-
-// delay time before load data (in ms)
-const DELAY = 2000;
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +20,7 @@ export class AppComponent {
   ) {
     this.state.connect(
       'periodic',
-      this.periodicService.fetchAll().pipe(delay(DELAY))
+      this.periodicService.fetchAll().pipe(delay(environment.DELAY_LOADING))
     );
   }
 }

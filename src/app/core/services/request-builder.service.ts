@@ -8,6 +8,11 @@ import { Observable } from 'rxjs';
 export class RequestBuilderService {
   constructor(protected httpClient: HttpClient) {}
 
+  /**
+   * Get data from json file.
+   *
+   * @param path
+   */
   public asset<T>(path: string): Observable<T> {
     return this.httpClient.get<T>('database/' + path + '.json');
   }
