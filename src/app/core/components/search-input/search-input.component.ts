@@ -16,21 +16,42 @@ import { MatIconButton } from '@angular/material/button';
 @Component({
   selector: 'app-search-input',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatIcon,
+    MatIconButton,
+  ],
   templateUrl: './search-input.component.html',
   styleUrl: './search-input.component.scss',
 })
 export class SearchInputComponent implements OnInit {
   /**
-   * Emitter for input tekst
+   * Form Model value
+   * @protected
+   */
+  protected query = '';
+
+  /**
+   * Emitter for input text.
    */
   @Output() changeInput = new EventEmitter<string>();
 
   /**
    * Subject for listen changes on input.
+   *
    * @private
    */
   private inputSubject = new Subject<string>();
+
+  /**
+   * Clear input and emit value
+   */
+  clearInput(): void {
+    this.query = '';
+    this.changeInput.emit('');
+  }
 
   /**
    * OnChange input handler.
@@ -62,7 +83,7 @@ export class SearchInputComponent implements OnInit {
   }
 
   /**
-   * Lifecycle after init component
+   * Lifecycle after init component.
    */
   ngOnInit(): void {
     this.listenInput();

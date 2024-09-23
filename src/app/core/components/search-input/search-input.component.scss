@@ -1,7 +1,15 @@
 .full-width {
   width: 100%;
+  position: relative;
 }
 
 .mdc-text-field--filled {
   --mdc-filled-text-field-container-shape: 28px;
+}
+
+.clear-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
