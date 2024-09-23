@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>#{{ data.item.position }} - {{ data.item.name }}</h2>
+
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Edit {{ data.key }}</mat-label>
+    <input matInput [(ngModel)]="edited" [type]="inputType()" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="edited()">Save</button>
+</mat-dialog-actions>
