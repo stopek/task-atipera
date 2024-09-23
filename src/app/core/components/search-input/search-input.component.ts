@@ -8,6 +8,10 @@ import {
   Subject,
   switchMap,
 } from 'rxjs';
+import { environment } from '../../../../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-search-input',
@@ -47,7 +51,7 @@ export class SearchInputComponent implements OnInit {
   private listenInput(): void {
     this.inputSubject
       .pipe(
-        debounceTime(2000),
+        debounceTime(environment.DELAY_SEARCH),
         distinctUntilChanged(),
         switchMap(value => {
           this.changeInput.emit(value);
