@@ -6,6 +6,11 @@
 
 .brand-name {
   color: var(--mdc-icon-button-disabled-icon-color);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .menu-content {
@@ -14,4 +19,11 @@
   align-items: center;
   width: 100%;
   max-width: 1320px;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }

@@ -16,6 +16,9 @@ export interface Periodic {
 export class PeriodicService {
   constructor(private _builder: RequestBuilderService) {}
 
+  /**
+   * Fetch all periodic data
+   */
   fetchAll(): Observable<Periodic[]> {
     return this._builder.asset<Periodic[]>('db');
   }
