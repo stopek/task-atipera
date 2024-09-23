@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.brand-name {
+  color: var(--mdc-icon-button-disabled-icon-color);
+}
+
+.menu-content {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+}
