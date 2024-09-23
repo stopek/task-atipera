@@ -1,3 +1,22 @@
 table {
   width: 100%;
 }
+
+.edited-container {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 0 0 25px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.02);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.empty-table {
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 15px 25px;
+}
