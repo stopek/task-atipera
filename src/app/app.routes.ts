@@ -6,6 +6,7 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadComponent: () =>
       import('./routes/home/home.component').then(m => m.HomeComponent),
+    title: 'Home | Requirement Task',
   },
   {
     path: 'periodic',
@@ -14,6 +15,7 @@ export const routes: Routes = [
       import('./routes/periodic/periodic.component').then(
         m => m.PeriodicComponent
       ),
+    title: 'Table | Requirement Task',
   },
   {
     path: '**',
@@ -21,5 +23,6 @@ export const routes: Routes = [
       import('./routes/not-found/not-found.component').then(
         m => m.NotFoundComponent
       ),
+    title: 'Not Found | Requirement Task',
   },
 ];
