@@ -141,6 +141,10 @@ export class TableComponent extends RxState<PeriodicState> {
   protected openDialog(item: Periodic, key: keyof Periodic): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: { item, key },
+
+      enterAnimationDuration: 300,
+      exitAnimationDuration: 200,
+      width: '500px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
