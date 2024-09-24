@@ -6,11 +6,12 @@ import { PeriodicService } from './core/api/periodic.service';
 import { RxState } from '@rx-angular/state';
 import { delay } from 'rxjs';
 import { environment } from '../environments/environment';
+import { LayoutComponent } from './core/components/layout/layout.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, MenuComponent],
+  imports: [RouterModule, MenuComponent, LayoutComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

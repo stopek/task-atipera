@@ -1,3 +1,20 @@
+@use '@angular/material' as mat;
+
+.table-container {
+  border-radius: 30px;
+  overflow: hidden;
+  overflow-x: auto;
+  @include mat.elevation-transition();
+  @include mat.elevation(2);
+}
+
+:host {
+  .mat-mdc-header-cell,
+  .mat-mdc-cell {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
 table {
   width: 100%;
 }
