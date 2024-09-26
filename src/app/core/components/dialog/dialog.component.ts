@@ -64,7 +64,6 @@ export class DialogComponent {
 
   /**
    * Close after click "cancel" button.
-   *
    */
   onCancel(): void {
     this.dialogRef.close();
